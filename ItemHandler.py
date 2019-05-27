@@ -90,7 +90,6 @@ def processString(string):
 with open('item_list.pickle', 'rb') as data: 
     item_list = pickle.load(data)
 
-#print(item_list)
 
 test_list = item_list["One Small Favour"]
 
@@ -102,7 +101,6 @@ print(test_split)
 complete_item_list = [] 
 
 for string in test_split:
-    #print(string)
     rec_limiter = re.search("Recommended:", string, re.IGNORECASE) 
     # This should've been filtered out, but for now, break whenever reached recommended items
     # (Currently only focused on needed items)
